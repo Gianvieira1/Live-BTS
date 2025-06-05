@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BEARER_TOKEN = 'eyJhbGciOiJIUzI1NiJ9...';  // Cortado por segurança
+const BEARER_TOKEN = Process.env.BEARER_TOKEN // Cortado por segurança
 
 export async function getWeverseNotifications() {
   const res = await axios.get('https://weverse.io/api/v1/notifications', {

@@ -1,0 +1,20 @@
+{
+  "name": "Live BTS Notifier",
+  "short_name": "BTS Live",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Notificações ao vivo dos integrantes do BTS no Weverse",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
