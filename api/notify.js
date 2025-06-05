@@ -10,7 +10,7 @@ const serviceAccount = {
   "client_id": process.env.FIREBASE_PRIVATE_CLIENTID,
   "auth_uri": process.env.FIREBASE_PRIVATE_AUTH,
   "token_uri": process.env.FIREBASE_PRIVATE_TOKEN,
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "auth_provider_x509_cert_url": process.env.FIREBASE_PRIVATE_AUTH_PROVIDER,
   "client_x509_cert_url":  process.env.FIREBASE_PRIVATE_X509,
   "universe_domain": "googleapis.com"
 };
