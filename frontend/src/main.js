@@ -13,7 +13,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const messaging = getMessaging(app);
 
-getToken(messaging, { vapidKey: "YOUR_PUBLIC_VAPID_KEY" }).then((currentToken) => {
+getToken(messaging, { vapidKey: "BP9xDc2HOtXBRvSeJRaoPsh1ISYQ7O1stQ932w302PDji-nXckKRya9caOlWDhJm9tBNJhtE2lVCYwuLgdGpvfk" }).then((currentToken) => {
   if (currentToken) {
     console.log("Token recebido:", currentToken);
   } else {
