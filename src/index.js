@@ -20,7 +20,11 @@ onMessage(messaging, (payload) => {
 requestNotificationPermission();
 
 setInterval(async () => {
-  const data = await getWeverseNotifications();
-  console.log("New notifications:", data);
-  // Aqui poderia acionar backend via fetch('/api/notify', ...) para enviar push
-}, 60000);
+  try {
+    const res = await fetch('/api/notify');
+    const data = await res.json();
+    console.log("Verificação concluída:", data);
+  } catch (err) {
+    console.error("Erro ao chamar o backend:", err);
+  }
+}, 60000); // a cada 60 segundos
