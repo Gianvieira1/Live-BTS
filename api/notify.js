@@ -12,7 +12,7 @@ const serviceAccount = {
   "token_uri": process.env.FIREBASE_PRIVATE_TOKEN,
   "auth_provider_x509_cert_url": process.env.FIREBASE_PRIVATE_AUTH_PROVIDER,
   "client_x509_cert_url":  process.env.FIREBASE_PRIVATE_X509,
-  "universe_domain": "googleapis.com"
+  "universe_domain": process.env.FIREBASE_PRIVATE_DOMAIN
 };
 
 if (!admin.apps.length) {
