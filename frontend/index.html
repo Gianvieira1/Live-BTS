@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live BTS Push</title>
+</head>
+<body>
+  <h1>Notificações de Live do BTS</h1>
+  <p>Inscrevendo no canal de notificações...</p>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-messaging-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBht5tWY2DmqgsxduXsBDLFfpeTdOo9U2U",
+      authDomain: "live-bts.firebaseapp.com",
+      projectId: "live-bts",
+      storageBucket: "live-bts.firebasestorage.app",
+      messagingSenderId: "299732282682",
+      appId: "1:299732282682:web:a9d5bf8ab76195e3437403"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const messaging = firebase.messaging();
+    messaging.requestPermission()
+      .then(() => messaging.getToken())
+      .then(token => console.log("Token:", token))
+      .catch(err => console.error("Erro:", err));
+  </script>
+</body>
+</html>
